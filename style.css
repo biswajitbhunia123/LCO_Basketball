@@ -1,0 +1,682 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Prompt:800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background: rgba(12, 11, 11, 0.925);
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 1350px;
+  margin: auto;
+  box-shadow: 0 20px 30px rgb(0, 0, 0);
+}
+/* ----------navigation-------------- */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: "Prompt", sans-serif;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: rgb(25, 25, 25);
+  padding: 0 20px;
+}
+nav a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: rgb(126, 94, 53);
+  padding: 1rem;
+  font-family: "Prompt", sans-serif;
+}
+nav a:hover {
+  background-color: black;
+  color: white;
+}
+nav span {
+  margin-left: auto;
+  color: rgb(126, 94, 53);
+}
+
+/* --------------login && gign-up---------- */
+.form-container {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.disable {
+  opacity: 1;
+  visibility: visible;
+}
+.modal {
+  width: 400px;
+  background: linear-gradient(rgba(148, 42, 42, 0.8), rgba(185, 129, 129, 0.6)),
+    url(LCO-sports-web-challenge-master/artimg-1.png) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.display {
+  opacity: 1;
+  visibility: visible;
+}
+
+.x-btn {
+  position: absolute;
+  right: 20px;
+  font-size: 50px;
+  color: #222;
+  cursor: pointer;
+}
+.form-header {
+  text-align: center;
+  margin: 80px 0 150px 0;
+  color: #fff;
+}
+
+.form-header h3 {
+  font-family: "Prompt", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-group {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.input-group input {
+  width: 250px;
+  padding: 15px 15px 15px 50px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  font-family: "Prompt", sans-serif;
+  font-size: 16px;
+  color: #ddd;
+}
+
+.input-group i {
+  position: absolute;
+  top: 13px;
+  left: 17px;
+  font-size: 18px;
+  color: #aaa;
+}
+
+.form button {
+  width: 310px;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background-color: #d867d8;
+  color: #fff;
+  font-family: "Prompt", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 10px 0 50px 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+.form button :active {
+  transform: translateY(0);
+}
+
+/* ---------------landing----------------- */
+.hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: yellow;
+}
+.hero .left {
+  width: 55%;
+  position: relative;
+  background: rgb(26, 26, 26);
+}
+.hero .left h1 {
+  padding-top: 300px;
+  font-size: 5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 80px;
+  font-family: "Permanent Marker", cursive;
+  transform: rotate(-5deg);
+}
+.hero .right {
+  width: 45%;
+}
+.hero .right img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------------container && about us---------------- */
+.container {
+  width: 100%;
+  height: 530px;
+  background-color: rgb(25, 25, 25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us {
+  max-width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  height: 50%;
+  border-radius: 40px;
+  font-family: "Prompt", sans-serif;
+}
+.about-us h1 {
+  font-size: 2rem;
+  color: rgba(131, 129, 124, 0.925);
+}
+.about-us p {
+  color: #949494de;
+  font-weight: 100;
+  padding-bottom: 30px;
+}
+.about-us a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.938);
+  width: 120px;
+  height: 45px;
+  padding-top: 10px;
+  border-radius: 10px;
+  background-color: rgba(28, 207, 28, 0.938);
+  transition: 0.4s all ease;
+}
+
+.about-us a:hover {
+  transform: scale(1.2);
+}
+
+/* ------tournament---------- */
+
+.tournament {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tournament .t-left {
+  width: 100%;
+  height: 245px;
+  background: url(LCO-sports-web-challenge-master/new.png);
+  background-color: rgb(26, 26, 26);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.tournament .t-right {
+  height: 400px;
+  width: 100%;
+  background-color: rgb(26, 26, 26);
+  text-align: center;
+}
+.tournament .t-right h1 {
+  color: rgba(131, 129, 124, 0.925);
+  font-size: 2rem;
+  font-family: "Prompt", sans-serif;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+}
+.tournament .t-right .big {
+  color: rgba(253, 253, 253, 0.884);
+  font-family: "Permanent Marker", cursive;
+  line-height: 47px;
+  font-size: 2.3rem;
+  animation: animate 1s linear infinite;
+}
+@keyframes animate {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* -------------Team------------------ */
+.team {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 3rem 0;
+  background-color: rgb(26, 26, 26);
+}
+.team h1 {
+  display: block;
+  font-family: "Prompt", sans-serif;
+  font-size: 2rem;
+  color: rgba(131, 129, 124, 0.925);
+}
+.team h3 {
+  font-size: 1.4rem;
+  font-family: "Prompt", sans-serif;
+  color: rgba(221, 171, 45, 0.925);
+  text-transform: uppercase;
+  background-color: black;
+  width: 300px;
+  height: 50px;
+  padding-top: 6px;
+}
+.team .member {
+  margin-bottom: 40px;
+}
+.team .member img {
+  width: 300px;
+  height: 300px;
+  outline: 10px solid rgba(129, 87, 93, 0.993);
+  outline-offset: -18px;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+}
+.team .member img:hover {
+  filter: grayscale(0);
+}
+.team .member .details {
+  text-align: center;
+}
+/* -----------faq-header && contact-us header---------- */
+.faq-header {
+  text-align: center;
+  background-color: rgb(25, 25, 25);
+  font-family: "Prompt", sans-serif;
+  color: rgba(131, 129, 124, 0.925);
+  font-size: 2rem;
+  padding-top: 20px;
+}
+/* ---------faq------------- */
+
+.faq {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  grid-template-areas:
+    "q1"
+    "q2"
+    "q3"
+    "q4"
+    "video";
+  background-color: rgb(26, 26, 26);
+}
+
+.video-section {
+  grid-area: video;
+  margin-top: 20px;
+  padding-bottom: 2rem;
+}
+.faq .q1 {
+  grid-area: q1;
+}
+.faq .q2 {
+  grid-area: q2;
+}
+.faq .q3 {
+  grid-area: q3;
+}
+.faq .q4 {
+  grid-area: q4;
+}
+.faq .question {
+  height: 150px;
+  text-align: center;
+  padding-top: 3.4rem;
+  margin-bottom: 2px;
+  width: 80%;
+  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.42);
+  border-radius: 10px;
+  color: rgba(240, 248, 255, 0.397);
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+  transition: 0.3s ease;
+}
+.faq .question:hover {
+  transform: scale(1.02);
+  color: rgb(230, 93, 14);
+}
+
+/* ---------contact us -------------------- */
+.contact-us {
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: center;
+  grid-template-areas:
+    "heading"
+    "mob"
+    "address";
+  text-align: center;
+  height: 200px;
+  background-color: rgb(25, 25, 25);
+}
+.contact-us h1 {
+  grid-area: heading;
+  color: rgba(148, 137, 144, 0.788);
+  padding-top: 40px;
+  font-family: "Prompt", sans-serif;
+  font-size: 2rem;
+}
+.contact-us .mob {
+  grid-area: mob;
+  color: rgba(177, 201, 193, 0.801);
+  font-family: "Prompt", sans-serif;
+}
+.contact-us .address {
+  grid-area: address;
+  color: rgba(177, 201, 193, 0.801);
+  font-family: "Prompt", sans-serif;
+}
+
+/* -------------------------- */
+
+@media only screen and (min-width: 300px) {
+  .hero {
+    flex-wrap: wrap;
+  }
+  .hero .left {
+    width: 100%;
+  }
+  .hero .left h1 {
+    padding-top: 60px;
+    font-size: 4rem;
+  }
+  .hero .right {
+    width: 100%;
+  }
+  .container {
+    height: 750px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .container {
+    height: 600px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .team .member img {
+    width: 400px;
+    height: 400px;
+    outline-offset: -25px;
+  }
+  .team h3 {
+    font-size: 1.6rem;
+    width: 400px;
+    height: 60px;
+    padding-top: 9px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .hero .left h1 {
+    padding-top: 70px;
+    font-size: 5rem;
+  }
+  .container {
+    width: 100%;
+    height: 630px;
+  }
+  .about-us {
+    max-width: 1000px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 6rem;
+    background-color: #1a1a1a;
+    height: 500px;
+    box-shadow: 0 10px 10px rgb(0, 0, 0);
+    border-radius: 30px;
+    font-family: "Prompt", sans-serif;
+  }
+  .about-us h1 {
+    font-size: 3rem;
+    color: rgba(100, 100, 100, 0.89);
+  }
+  .about-us p {
+    color: #51513ede;
+    font-weight: 100;
+    padding-bottom: 30px;
+  }
+  .about-us a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.938);
+    width: 150px;
+    height: 45px;
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: rgba(28, 207, 28, 0.938);
+    transition: 0.4s all ease;
+  }
+
+  .tournament {
+    flex-direction: row;
+    height: 60%;
+  }
+  .tournament .t-left {
+    width: 40%;
+    height: 400px;
+  }
+  .tournament .t-right {
+    height: 400px;
+    width: 60%;
+    background-color: rgb(26, 26, 26);
+    text-align: center;
+  }
+  .tournament .t-right h1 {
+    font-size: 3rem;
+    font-family: "Prompt", sans-serif;
+    padding-bottom: 30px;
+  }
+  .tournament .t-right .big {
+    line-height: 70px;
+    font-size: 3.4rem;
+  }
+
+  .team {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 100px;
+  }
+  .team .member {
+    width: 30%;
+  }
+  .team h3 {
+    width: 100%;
+  }
+  .team h1 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 3rem;
+  }
+  .team .member img {
+    width: 100%;
+  }
+  .faq {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "video video"
+      " q1     q2"
+      " q3     q4";
+    padding: 3rem;
+  }
+  .faq .question {
+    height: 200px;
+    text-align: center;
+    padding: 2.3rem;
+  }
+  .faq-header {
+    font-size: 3rem;
+  }
+
+  .contact-us {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "heading heading"
+      "mob  address";
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+        283deg,
+        rgba(228, 228, 228, 0.04) 0%,
+        rgba(228, 228, 228, 0.04) 30%,
+        rgba(130, 130, 130, 0.04) 30%,
+        rgba(130, 130, 130, 0.04) 49%,
+        rgba(31, 31, 31, 0.04) 49%,
+        rgba(31, 31, 31, 0.04) 100%
+      ),
+      linear-gradient(
+        297deg,
+        rgba(228, 228, 228, 0.04) 0%,
+        rgba(228, 228, 228, 0.04) 20%,
+        rgba(130, 130, 130, 0.04) 20%,
+        rgba(130, 130, 130, 0.04) 60%,
+        rgba(31, 31, 31, 0.04) 60%,
+        rgba(31, 31, 31, 0.04) 100%
+      ),
+      linear-gradient(
+        242deg,
+        rgba(228, 228, 228, 0.04) 0%,
+        rgba(228, 228, 228, 0.04) 29%,
+        rgba(130, 130, 130, 0.04) 29%,
+        rgba(130, 130, 130, 0.04) 48%,
+        rgba(31, 31, 31, 0.04) 48%,
+        rgba(31, 31, 31, 0.04) 100%
+      ),
+      linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
+  }
+  .contact-us h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .hero .left {
+    width: 55%;
+  }
+  .hero .left h1 {
+    padding-top: 300px;
+    font-size: 7rem;
+    line-height: 90px;
+  }
+
+  .hero .right {
+    width: 45%;
+  }
+  .hero .left h1::after {
+    content: "LCO";
+    position: absolute;
+    top: 200px;
+    right: 160px;
+    width: 500px;
+    height: 600px;
+    transform: rotate(5deg);
+    margin-top: 120px;
+    font-family: "Prompt", sans-serif;
+    font-size: 350px;
+    z-index: -1;
+    color: rgba(56, 53, 53, 0.56);
+    letter-spacing: 30px;
+  }
+  .hero .right img {
+    transition: 0.2s ease-in-out;
+  }
+  .hero .right img:hover {
+    transform: scale(0.9);
+  }
+  .tournament {
+    padding: 0 5%;
+    margin: auto;
+    background: rgba(28, 207, 28, 0.938);
+  }
+  .tournament .t-right .big {
+    font-family: "Permanent Marker", cursive;
+    line-height: 90px;
+    font-size: 5rem;
+  }
+  .faq .question {
+    padding: 4.3rem;
+  }
+}
